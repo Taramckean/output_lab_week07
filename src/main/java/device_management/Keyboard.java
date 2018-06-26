@@ -16,6 +16,7 @@ public class Keyboard implements iInput {
     public String backlight() {
         return "Keyboard is backlit";
     }
+
     public String sendData(String data) {
         return "The keyboard has sent " + data;}
 }
