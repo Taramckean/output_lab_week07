@@ -21,4 +21,9 @@ public class KeyboardTest {
     public void canBacklightKeyboard(){
         assertEquals("Keyboard is backlit", keyboard.backlight());
     }
+
+    @Test
+    public void canSendData(){
+        assertEquals("The keyboard has sent this data", keyboard.sendData("this data"));
+    }
 }

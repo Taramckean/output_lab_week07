@@ -1,6 +1,8 @@
 package device_management;
 
-public class Keyboard {
+import Behaviours.iInput;
+
+public class Keyboard implements iInput {
     private String characterType;
 
     public Keyboard(String characterType){
@@ -14,4 +16,6 @@ public class Keyboard {
     public String backlight() {
         return "Keyboard is backlit";
     }
+    public String sendData(String data) {
+        return "The keyboard has sent " + data;}
 }

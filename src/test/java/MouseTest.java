@@ -1,3 +1,4 @@
+import device_management.Mouse;
 import device_management.Television;
 import org.junit.Before;
 import org.junit.Test;
@@ -5,11 +6,11 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class MouseTest {
-    Television.Mouse mouse;
+   Mouse mouse;
 
     @Before
     public void before(){
-        mouse = new Television.Mouse("Wireless", 2);
+        mouse = new Mouse("Wireless", 2);
     }
 
     @Test
@@ -30,5 +31,10 @@ public class MouseTest {
     @Test
     public void canClick(){
         assertEquals("device_management.Television.Mouse is clicking", mouse.click());
+    }
+
+    @Test
+    public void canSendData(){
+        assertEquals("The mouse has sent this data", mouse.sendData("this data"));
     }
 }
